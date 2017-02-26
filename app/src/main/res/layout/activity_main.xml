@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorBackground"
+    tools:context="com.example.uni.dialog.UI.MainActivity">
+
+    <Button
+        android:text="Eintragen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="160dp"
+        android:id="@+id/button_entry" />
+
+    <Button
+        android:text="Bearbeiten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_entry"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="39dp"
+        android:layout_marginEnd="39dp"
+        android:id="@+id/button_edit" />
+
+    <Button
+        android:text="Faktoren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_measure"
+        android:id="@+id/button_factors"
+        android:layout_alignLeft="@+id/button_edit"
+        android:layout_alignStart="@+id/button_edit"
+        android:layout_alignRight="@+id/button_edit"
+        android:layout_alignEnd="@+id/button_edit" />
+
+    <Button
+        android:text="Messen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_measure"
+        android:layout_below="@+id/button_edit"
+        android:layout_alignLeft="@+id/button_entry"
+        android:layout_alignStart="@+id/button_entry"
+        android:layout_marginTop="47dp"
+        android:layout_alignRight="@+id/button_entry"
+        android:layout_alignEnd="@+id/button_entry" />
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/activity_record" android:paddingLeft="40px" android:background="@color/colorBackground">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="103dp"
+        android:id="@+id/editText_glucose"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="20dp"
+        android:id="@+id/editText_carbonhydrate"
+        android:layout_below="@+id/editText_glucose"
+        android:layout_alignLeft="@+id/editText_glucose"
+        android:layout_alignStart="@+id/editText_glucose" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:ems="10"
+        android:inputType="date"
+        android:layout_below="@+id/editText_carbonhydrate"
+        android:layout_alignLeft="@+id/editText_carbonhydrate"
+        android:layout_alignStart="@+id/editText_carbonhydrate"
+        android:layout_marginTop="59dp"
+        android:id="@+id/editText_date" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:ems="10"
+        android:inputType="time"
+        android:layout_below="@+id/editText_date"
+        android:layout_alignLeft="@+id/editText_date"
+        android:layout_alignStart="@+id/editText_date"
+        android:layout_marginTop="27dp"
+        android:id="@+id/editText_time" />
+
+    <Button
+        android:text="Eintragen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="36dp"
+        android:id="@+id/button"
+        android:background="#d7d4d4"
+        android:layout_alignLeft="@+id/textView_time"
+        android:layout_alignStart="@+id/textView_time"
+        android:layout_alignRight="@+id/editText_time"
+        android:layout_alignEnd="@+id/editText_time" />
+
+    <TextView
+        android:text="Wert Eintragen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="46dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="60px"
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/editText_glucose"
+        android:layout_alignEnd="@+id/editText_glucose"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <CheckBox
+        android:text="Nachtrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check_appendix"
+        android:layout_below="@+id/editText_carbonhydrate"
+        android:layout_alignLeft="@+id/textView_date"
+        android:layout_alignStart="@+id/textView_date"
+        android:layout_marginTop="18dp" />
+
+    <TextView
+        android:text="Blutzucker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="35px"
+        android:layout_alignBaseline="@+id/editText_glucose"
+        android:layout_alignBottom="@+id/editText_glucose"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Kohlenhydrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="35px"
+        android:id="@+id/textView2"
+        android:layout_alignBaseline="@+id/editText_carbonhydrate"
+        android:layout_alignBottom="@+id/editText_carbonhydrate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Datum"
+        android:inputType="none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="35px"
+        android:id="@+id/textView_date"
+        android:layout_alignBaseline="@+id/editText_date"
+        android:layout_alignBottom="@+id/editText_date"
+        android:layout_alignParentLeft="true"
+        android:visibility="invisible"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:visibility="invisible"
+        android:text="Uhrzeit"
+        android:inputType="none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="35px"
+        android:id="@+id/textView_time"
+        android:layout_alignBaseline="@+id/editText_time"
+        android:layout_alignBottom="@+id/editText_time"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
