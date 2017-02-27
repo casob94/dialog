@@ -1,10 +1,11 @@
 package com.example.uni.dialog.UI;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
-import com.example.uni.dialog.MyListener.Functions;
-import com.example.uni.dialog.MyListener.MyListener;
 import com.example.uni.dialog.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,11 +16,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MyListener _listener = MyListener.getInstance(R.id.activity_main, this);
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch(v.getId()) {
+                    case R.id.button_entry:
+                        Intent recordIntent = new Intent(MainActivity.this, RecordActivity.class);
+                        startActivity(recordIntent);
+                        break;
+                    case R.id.button_edit:
+                        //FreeStyle Libre support still to implement.
+                        break;
+                    case R.id.button_measure:
+                        //Editing existing records
+                        break;
+                    case R.id.button_factors:
+                        Intent factorIntent = new Intent(MainActivity.this, FactorActivity.class);
+                        startActivity(factorIntent);
+                }
+            }
+        };
 
-        _listener.addOnClickAction(R.id.button_entry, Functions.button_entry, this);
-        _listener.addOnClickAction(R.id.button_edit, Functions.button_edit, this);
-        _listener.addOnClickAction(R.id.button_factors, Functions.button_factors, this);
-        _listener.addOnClickAction(R.id.button_measure, Functions.button_measure, this);
+        Button entryButton = (Button)findViewById(R.id.button_entry);
+        entryButton.setOnClickListener(listener);
+        Button editButton = (Button)findViewById(R.id.button_edit);
+        Button measureButton = (Button)findViewById(R.id.button_measure);
+        Button factorButton = (Button)findViewById(R.id.button_factors);
+        factorButton.setOnClickListener(listener);
     }
+
+
 }
