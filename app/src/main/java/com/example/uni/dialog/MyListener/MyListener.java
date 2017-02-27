@@ -14,6 +14,8 @@ import java.util.Stack;
 
 public class MyListener implements View.OnClickListener {
 
+    // Doesn't Work poperly, back to the roots...
+
     private static MyListener _instance = null;
     private HashMap<Integer, Runnable> _actions;
     private String LOG_TAG = this.getClass().getSimpleName();

@@ -27,6 +27,10 @@ public class Factor {
         _eveningTimeMinutes = eveningTimeMinutes;
     }
 
+    public Factor(double morningFactor, double middayFactor, double eveningFactor, int correctionFactor) {
+        this(morningFactor, middayFactor, eveningFactor, correctionFactor, 360, 720, 1200);
+    }
+
     public double getCurrentFactor() {
         Calendar calendar = GregorianCalendar.getInstance(TimeZone.getTimeZone(Time.getCurrentTimezone()));
 
@@ -49,11 +53,11 @@ public class Factor {
         return currentFactor;
     }
 
-    public double get_morningFactor() {
+    public double getMorningFactor() {
         return _morningFactor;
     }
 
-    public double get_middayFactor() {
+    public double getMiddayFactor() {
         return _middayFactor;
     }
 
