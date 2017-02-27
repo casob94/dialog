@@ -1,7 +1,5 @@
 package com.example.uni.dialog.Database.Objects;
 
-import android.text.format.Time;
-
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;

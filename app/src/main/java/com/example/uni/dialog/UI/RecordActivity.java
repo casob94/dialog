@@ -1,10 +1,7 @@
 package com.example.uni.dialog.UI;
 
-import android.icu.text.TimeZoneFormat;
-import android.icu.text.TimeZoneNames;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.InputType;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -12,13 +9,10 @@ import android.widget.EditText;
 
 import com.example.uni.dialog.R;
 
-import android.text.format.Time;
 import android.widget.TextView;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.TimeZone;
