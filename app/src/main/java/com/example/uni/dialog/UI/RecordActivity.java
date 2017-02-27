@@ -1,5 +1,6 @@
 package com.example.uni.dialog.UI;
 
+import android.icu.text.TimeZoneFormat;
 import android.icu.text.TimeZoneNames;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 import java.util.TimeZone;
 
 public class RecordActivity extends AppCompatActivity {
@@ -43,13 +45,14 @@ public class RecordActivity extends AppCompatActivity {
                     dateText.setVisibility(View.VISIBLE);
                     timeText.setVisibility(View.VISIBLE);
 
-                    Calendar calendar = GregorianCalendar.getInstance(TimeZone.getTimeZone(Time.getCurrentTimezone()));
+                    Calendar calendar = GregorianCalendar.getInstance(TimeZone.getTimeZone(Calendar.getInstance().getTimeZone().getDisplayName()));
 
-                    SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
-                    SimpleDateFormat timeFormat = new SimpleDateFormat("dd.MM.yy");
+                    //SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm",Locale.GERMAN);
+                    SimpleDateFormat timeFormat = new SimpleDateFormat("dd.MM.yy", Locale.GERMAN);
 
-                    timeEdit.setText(dateFormat.format(calendar.getTime()).toString());
-                    dateEdit.setText(timeFormat.format(calendar.getTime()).toString());
+                    timeEdit.setText(dateFormat.format(calendar.getTime()));
+                    dateEdit.setText(timeFormat.format(calendar.getTime()));
 
                 } else {
                     timeEdit.setVisibility(View.INVISIBLE);

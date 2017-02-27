@@ -34,7 +34,7 @@ public class Factor {
     }
 
     public double getCurrentFactor() {
-        Calendar calendar = GregorianCalendar.getInstance(TimeZone.getTimeZone(Time.getCurrentTimezone()));
+        Calendar calendar = GregorianCalendar.getInstance(TimeZone.getTimeZone(Calendar.getInstance().getTimeZone().getDisplayName()));
 
         int currentTimeMinutes = calendar.get(Calendar.HOUR_OF_DAY)*60 + calendar.get(Calendar.MINUTE);
 
