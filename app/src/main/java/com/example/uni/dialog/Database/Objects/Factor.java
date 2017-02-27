@@ -8,6 +8,8 @@ import java.util.TimeZone;
 
 public class Factor {
 
+    //TODO: Create intent to set morning, midday and evening time.
+
     private double _morningFactor;
     private double _middayFactor;
     private double _eveningFactor;

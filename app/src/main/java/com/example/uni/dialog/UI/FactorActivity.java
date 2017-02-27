@@ -29,8 +29,6 @@ public class FactorActivity extends AppCompatActivity {
         _database = new DataSource(this);
 
         _database.open();
-        //database.setFactor(new Factor(2.0, 2.0, 2.0, 100, 360, 720, 1200));
-        // TODO: Get current Factor Values from Database
         Factor currentFactor;
         try {
             currentFactor = _database.getFactor();
@@ -56,7 +54,7 @@ public class FactorActivity extends AppCompatActivity {
                 switch(v.getId()) {
                     case R.id.button_factor_change:
 
-                        new AlertDialog.Builder(FactorActivity.this).setTitle("Änderungen Übernehmen?").setMessage("Die Änderungen an den Faktoren werden gespeichert und für die zukünftige Insulinbedarfsberechnung genutzt.").setPositiveButton("Änderungen Übernehmen", new DialogInterface.OnClickListener() {
+                        new AlertDialog.Builder(FactorActivity.this).setTitle("Änderungen Übernehmen?").setMessage("Die Änderungen an den Faktoren werden gespeichert und für die zukünftige Insulinbedarfsberechnung genutzt.").setPositiveButton("Übernehmen", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 _database.open();
