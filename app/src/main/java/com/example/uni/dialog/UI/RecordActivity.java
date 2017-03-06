@@ -41,7 +41,6 @@ public class RecordActivity extends AppCompatActivity {
 
                     Calendar calendar = GregorianCalendar.getInstance(TimeZone.getTimeZone(Calendar.getInstance().getTimeZone().getDisplayName()));
 
-                    //SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
                     SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm",Locale.GERMAN);
                     SimpleDateFormat timeFormat = new SimpleDateFormat("dd.MM.yy", Locale.GERMAN);
 

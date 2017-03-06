@@ -29,6 +29,13 @@
                 <category android:name="android.intent.category.INPUT" />
             </intent-filter>
         </activity>
+        <activity android:name=".UI.RecordEditActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.EDITRECORD" />
+
+                <category android:name="android.intent.category.EDIT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

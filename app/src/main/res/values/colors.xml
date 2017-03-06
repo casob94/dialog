@@ -7,4 +7,5 @@
     <color name="colorPrimaryDark">#088008</color>
     <color name="colorAccent">#1bb41b</color>
     <color name="colorBackground">#f1fdf1</color>
+    <color name="calendarBar">#eaeaea</color>
 </resources>

@@ -25,10 +25,12 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(recordIntent);
                         break;
                     case R.id.button_edit:
-                        //FreeStyle Libre support still to implement.
+                        //Edit Records.
+                        Intent recordEditIntent = new Intent(MainActivity.this, RecordEditActivity.class);
+                        startActivity(recordEditIntent);
                         break;
                     case R.id.button_measure:
-                        //Editing existing records
+                        //FreeStyle Libre support still to implement.
                         break;
                     case R.id.button_factors:
                         Intent factorIntent = new Intent(MainActivity.this, FactorActivity.class);
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         Button entryButton = (Button)findViewById(R.id.button_entry);
         entryButton.setOnClickListener(listener);
         Button editButton = (Button)findViewById(R.id.button_edit);
+        editButton.setOnClickListener(listener);
         Button measureButton = (Button)findViewById(R.id.button_measure);
         Button factorButton = (Button)findViewById(R.id.button_factors);
         factorButton.setOnClickListener(listener);

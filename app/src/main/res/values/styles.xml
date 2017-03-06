@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyButton">
+        <item name="android:background">@drawable/my_button</item>
+    </style>
+
 </resources>
